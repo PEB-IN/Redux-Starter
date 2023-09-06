@@ -7,8 +7,10 @@ import "./index.css";
 import "font-awesome/css/font-awesome.min.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap.min.js";
 import App from "./App";
-import { store } from "./redux/store";
+import store from "./redux-react/store";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
