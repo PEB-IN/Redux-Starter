@@ -43,7 +43,7 @@ To set up a development environment, please follow these steps:
 1. Clone the repo
 
    ```shell
-    git clone https://github.com/v-IJU/react-starter.git
+    git clone https://github.com/PEB-IN/react-starter.git
    ```
 
 2. Change directory to the project directory
