@@ -3,14 +3,20 @@ import { useSelector, useDispatch } from "react-redux";
 import { addName, deleteName } from "../redux-react/actions/userAction";
 import Demo from "./Demo";
 import { useState } from "react";
+import axios from "axios";
 
 const Home = () => {
   const [demoname, setdemoname] = useState("demonamee with usestate component");
   const { name, age } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
-  const ChangeName = () => {
-    dispatch(addName("new name"));
+  const ChangeName = async () => {
+    await axios
+      .get("https://jsonplaceholder.typicode.com/todos/1")
+      .then((response) => {
+        dispatch(addName("new name", response.data));
+      })
+      .catch((error) => console.log(error));
   };
   return (
     <>
